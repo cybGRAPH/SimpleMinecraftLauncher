@@ -21,4 +21,4 @@ def filesend(file):
             client_socket.send(filedir)
         client_socket.close()
 if __name__ == "__main__" :
-    threading.start(threading.Thread(target=filesend))
+    filesend("requirements")
