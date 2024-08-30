@@ -67,7 +67,7 @@ public class SimpleMod {
             Minecraft.getMinecraft().player.setSprinting(true);
         }
 
-        // 切换杀戮区域状态
+        // 切换杀光环域状态
         if (keyToggleKillArea.isPressed()) {
             toggleKillArea();
         }
@@ -141,13 +141,13 @@ public class SimpleMod {
         updateDisplayStatus();
     }
 
-    // 切换杀戮区域功能
+    // 切换杀戮光环功能
     private void toggleKillArea() {
         isKillAreaEnabled = !isKillAreaEnabled;
         updateDisplayStatus();
     }
 
-    // 切换脚手架功能
+    // 切换自动搭路功能
     private void toggleScaffold() {
         isScaffoldEnabled = !isScaffoldEnabled;
         updateDisplayStatus();
@@ -157,8 +157,8 @@ public class SimpleMod {
     private void updateDisplayStatus() {
         Minecraft mc = Minecraft.getMinecraft();
         String statusText = "自动疾跑: " + (isAutoSprintEnabled ? TextFormatting.GREEN + "开启" : TextFormatting.RED + "关闭") 
-                         + " | 杀戮区域: " + (isKillAreaEnabled ? TextFormatting.GREEN + "开启" : TextFormatting.RED + "关闭") 
-                         + " | 脚手架: " + (isScaffoldEnabled ? TextFormatting.GREEN + "开启" : TextFormatting.RED + "关闭");
+                         + " | 杀戮光环: " + (isKillAreaEnabled ? TextFormatting.GREEN + "开启" : TextFormatting.RED + "关闭") 
+                         + " | 自动搭路: " + (isScaffoldEnabled ? TextFormatting.GREEN + "开启" : TextFormatting.RED + "关闭");
         mc.ingameGUI.getChatGUI().printChatMessage(new TextComponentString(statusText));
     }
 
